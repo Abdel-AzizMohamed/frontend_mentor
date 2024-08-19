@@ -13,52 +13,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Article preview component</title>
   </head>
   <body>
     <main>
-      <div class="image-container">
-        <!-- <img src="images/drawers.jpg" alt="drawers" /> -->
-      </div>
-      <article>
-        <h1 class="article-heading">
-          Shift the overall look and feel by adding these wonderful touches to
-          furniture in your home
-        </h1>
-        <p class="article-info">
-          Ever been in a room and felt like something was missing? Perhaps it
-          felt slightly bare and uninviting. I’ve got some simple tips to help
-          you make any room feel complete.
+      <div class="landing-info">
+        <img class="logo" src="images/logo.svg" alt="logo" />
+        <h1><span class="highlight">We're</span> coming soon</h1>
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
         </p>
-        <div class="article-author">
-          <div class="left-side">
-            <img src="images/avatar-michelle.jpg" />
-            <div class="author-info">
-              <span class="bold-text">Michelle Appleton</span>
-              <span class="thin-text">28 Jun 2020</span>
-            </div>
-          </div>
-          <div id="display-share" class="right-side">
-            <div id="share-container" class="share-container">
-              <span class="share">share</span>
-              <a href="#"
-                ><img src="images/icon-facebook.svg" alt="facebook"
-              /></a>
-              <a href="#"
-                ><img src="images/icon-twitter.svg" alt="twitter"
-              /></a>
-              <a href="#"
-                ><img src="images/icon-pinterest.svg" alt="pinterest"
-              /></a>
-            </div>
-          </div>
+        <div class="email-field">
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Email Address"
+          />
+          <img
+            id="error-icon"
+            class="error-icon"
+            src="images/icon-error.svg"
+            alt="error"
+          />
+          <button id="submit-button">
+            <img src="images/icon-arrow.svg" alt="arrow" />
+          </button>
+          <span id="error-text" class="error-text"
+            >Please provide a valid email</span
+          >
         </div>
-      </article>
+      </div>
+      <div class="landing-image"></div>
     </main>
-    <script src="display.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,1 +1,1 @@
-# Frontend Mentor - Article preview component
+# Frontend Mentor - Base Apparel coming soon page
