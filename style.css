@@ -7,160 +7,193 @@
 }
 
 :root {
-    /* ### Primary */
 
-    --Desaturated-Red: hsl(0, 36%, 70%);
-    --Soft-Red: hsl(0, 93%, 68%);
+    /* ### Primary */
+    --Red: hsl(0, 100%, 74%); 
+    --Green: hsl(154, 59%, 51%);
+    
+    /* ### Accent */
+    --Blue: hsl(248, 32%, 49%);
     
     /* ### Neutral */
-    
-    --Dark-Grayish-Red: hsl(0, 6%, 24%);
-    
-    /* ### Gradients */
-    
-    /* --
-    --Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
-    
+    --Dark-Blue: hsl(249, 10%, 26%); 
+    --Grayish-Blue: hsl(246, 25%, 77%);
+
     font-size: 16px;
 }
 
-body { /* 300, 400, 600 */
+body { /* 400, 500, 600, 700 */
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    background-color: var(--Red);
+    background-image: url(images/bg-intro-desktop.png);
+    background-size: cover;
     min-height: 100vh;
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 /* End Global */
-
-/* Start Landing */
+/* Start Main */
 main {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-}
-
-main .landing-info {
-    position: relative;
-    padding-top: 3rem;
-    padding-left: 10rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 610px
-}
-
-main .landing-info::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: calc(100% + 61px);
-    height: 100%;
-    background-image: url(images/bg-pattern-desktop.svg);
-    background-size: cover;
-}
-
-main .landing-info > img {
-    width: 158px;
-    margin-bottom: 10rem;
-}
-
-main .landing-info h1 {
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--Dark-Grayish-Red);
-    font-size: 5rem;
-    letter-spacing: 1rem;
-}
-
-main .landing-info h1 .highlight {
-    color: var(--Desaturated-Red);
-    font-weight: 300;
-}
-
-main .landing-info p {
-    color: var(--Desaturated-Red);
-    line-height: 1.5;
-    margin: 1rem 0 2rem;
-}
-
-main .landing-info .email-field {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-}
-
-main .landing-info .email-field input {
-    padding: 1rem;
-    width: 100%;
-    border: 1px solid var(--Desaturated-Red);
-    border-width: 1px 0 1px 1px;
-    border-radius: 2rem 0 0 2rem;
-    color: var(--Desaturated-Red);
-    font-weight: 300;
-    background-color: transparent;
-}
-
-main .landing-info .email-field input.error {
-    border-color: var(--Soft-Red)
-}
-
-main .landing-info .email-field .error-icon {
-    position: absolute;
-    top: 0;
-    right: 70px;
-    transform: translateY(50%);
-    display: none;
-}
-
-main .landing-info .email-field button {
-    position: absolute;
-    top: -1px;
-    right: 0;
-    transform: translateX(50%);
-    display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 1rem;
-    width: 100px;
-    border: none;
-    border-radius: 2rem;
-    background-image: linear-gradient(135deg, hsl(0, 80%, 86%) 0, hsl(0, 74%, 74%) 100%);
-    cursor: pointer;
-    transition: all .3s ease;
 }
 
-main .landing-info .email-field button:hover,
-main .landing-info .email-field button.active {
-    background-image: linear-gradient(135deg, hsl(0, 80%, 100%) 0, hsl(0, 74%, 74%) 100%);
-    box-shadow: 0 4px 8px #ccc;
+main .sign-landing {
+    max-width: 540px;
 }
 
-main .landing-info .email-field .error-text {
-    display: none;
-    color: var(--Soft-Red);
+main .sign-landing .landing-heading {
+    line-height: 1;
+    font-weight: 700;
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+main .sign-landing .landing-text {
+    color: #fff;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+main .sign-container {
+    max-width: 540px
+}
+
+main .sign-container .free-try {
+    margin-bottom: 1rem;
+    width: 100%;
+    font-weight: 600;
     font-size: .9rem;
+    background-color: var(--Blue);
+    border: none;
+    color: #fff;
+    border-radius: .7rem;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 20%);
+    padding: 1.3rem;
+    cursor: pointer;
+}
+
+main .sign-container .free-try .small-text {
+    font-weight: 400;
+}
+
+main .sign-container form {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: .7rem;
+    box-shadow: 0 5px 0px rgba(0, 0, 0, 20%);
+}
+
+main .sign-container form .field-group {
+    position: relative;
+}
+
+main .sign-container form input:not([type="submit"]) {
+    width: 100%;
+    font-weight: 600;
+    border: 1px solid var(--Grayish-Blue);
+    border-radius: .3rem;
+    background-color: transparent;
+    padding: 1rem 0 1rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+main .sign-container form input:not([type="submit"]).error {
+    border-width: 2px;
+    border-color: hsl(7, 73%, 66%);
+    color: hsl(7, 73%, 66%);
+    margin-bottom: 0rem;
+}
+
+main .sign-container form .error-text {
+    display: block;
+    margin-bottom: 1rem;
+    text-align: right;
+    font-size: .8rem;
+    color: var(--Red);
+    padding: .5rem 0;
+    font-style: italic;
+    display: none;
+}
+
+main .sign-container form img {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    display: none;
+}
+
+main .sign-container form input:not([type="submit"]):focus {
+    outline: 1px solid var(--Dark-Blue);
+}
+
+main .sign-container form input[type="submit"] {
+    width: 100%;
+    background-color: var(--Green);
+    border: none;
+    border-radius: .5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
     padding: 1rem;
+    box-shadow: 0 5px 0px hsl(161, 62%, 41%);
+    margin: 1rem 0;
+    color: #fff;
+    cursor: pointer;
+    transition: background .3s ease;
 }
 
-main .landing-info .email-field button img {
-    width: 12px;
-    height: 20px;
+main .sign-container form input[type="submit"]:hover {
+    background-color: hsl(150, 52%, 62%);
 }
 
-main .landing-image {
-    width: 610px;
-    background-image: url(images/hero-desktop.jpg);
-    height: 800px;
+main .sign-container form .terms-services {
+    display: block;
+    text-align: center;
+    color: var(--Grayish-Blue);
+    font-size: .8rem;
 }
-/* End Landing */
+
+main .sign-container form .terms-services .red-text {
+    color: var(--Red);
+    font-weight: 600;
+}
+/* End Main */
+
+/* Start Media */
+@media (max-width: 767px) {
+    :root {
+        font-size: 12px
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main .sign-landing {
+        width: 327px
+    }
+
+    main .sign-landing .landing-heading {
+        text-align: center;
+    }
+
+    main .sign-landing .landing-text {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+
+    main .sign-container {
+        width: 327px
+    }
+}
+/* End Media */

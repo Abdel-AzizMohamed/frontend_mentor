@@ -1,1 +1,1 @@
-# Frontend Mentor - Base Apparel coming soon page
+# Frontend Mentor - Intro component with sign up form

@@ -13,45 +13,89 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <title>Frontend Mentor | Base Apparel coming soon page</title>
     <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Intro component with sign up form</title>
   </head>
   <body>
     <main>
-      <div class="landing-info">
-        <img class="logo" src="images/logo.svg" alt="logo" />
-        <h1><span class="highlight">We're</span> coming soon</h1>
-        <p>
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our
-          launch deals.
+      <section class="sign-landing">
+        <h1 class="landing-heading">Learn to code by watching others</h1>
+        <p class="landing-text">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
         </p>
-        <div class="email-field">
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="Email Address"
-          />
-          <img
-            id="error-icon"
-            class="error-icon"
-            src="images/icon-error.svg"
-            alt="error"
-          />
-          <button id="submit-button">
-            <img src="images/icon-arrow.svg" alt="arrow" />
-          </button>
-          <span id="error-text" class="error-text"
-            >Please provide a valid email</span
+      </section>
+      <section class="sign-container">
+        <button class="free-try">
+          Try it free 7 days<span class="small-text">
+            then $20/mo. thereafter</span
           >
-        </div>
-      </div>
-      <div class="landing-image"></div>
+        </button>
+        <form action="" method="GET" novalidate>
+          <div class="field-group">
+            <input
+              id="first-name"
+              type="text"
+              required
+              minlength="4"
+              maxlength="12"
+              placeholder="First Name"
+            />
+            <img id="first-name-icon" src="images/icon-error.svg" alt="error" />
+          </div>
+          <span id="first-name-text" class="error-text"
+            >Frist name cannot be empty!</span
+          >
+          <div class="field-group">
+            <input
+              id="last-name"
+              type="text"
+              required
+              minlength="4"
+              maxlength="12"
+              placeholder="Last Name"
+            />
+            <img id="last-name-icon" src="images/icon-error.svg" alt="error" />
+          </div>
+          <span id="last-name-text" class="error-text"
+            >Last name cannot be empty!</span
+          >
+          <div class="field-group">
+            <input
+              id="email"
+              required
+              type="email"
+              placeholder="Email Address"
+            />
+            <img id="email-icon" src="images/icon-error.svg" alt="error" />
+          </div>
+          <span id="email-text" class="error-text"
+            >Email name cannot be empty!</span
+          >
+          <div class="field-group">
+            <input
+              id="password"
+              required
+              type="password"
+              placeholder="Password"
+            />
+            <img id="password-icon" src="images/icon-error.svg" alt="error" />
+          </div>
+          <span id="password-text" class="error-text"
+            >Password name cannot be empty!</span
+          >
+          <input id="submit" type="submit" value="Claim your free trial" />
+          <span class="terms-services"
+            >By clicking the button, you are agreeing to our
+            <span class="red-text">Terms and Services</span></span
+          >
+        </form>
+      </section>
     </main>
-    <script src="script.js"></script>
+    <script src="vaild.js"></script>
   </body>
 </html>
