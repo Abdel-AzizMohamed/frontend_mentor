@@ -13,89 +13,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Intro component with sign up form</title>
+    <title>Frontend Mentor | Product preview card component</title>
   </head>
   <body>
     <main>
-      <section class="sign-landing">
-        <h1 class="landing-heading">Learn to code by watching others</h1>
-        <p class="landing-text">
-          See how experienced developers solve problems in real-time. Watching
-          scripted tutorials is great, but understanding how developers think is
-          invaluable.
+      <div class="image-container">
+        <img src="images/image-product-desktop.jpg" alt="product-image" />
+      </div>
+      <div class="product-container">
+        <span class="product-type">Perfume</span>
+        <h1 class="product-heading alt-font">
+          Gabrielle Essence Eau De Parfum
+        </h1>
+        <p class="product-info">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
         </p>
-      </section>
-      <section class="sign-container">
-        <button class="free-try">
-          Try it free 7 days<span class="small-text">
-            then $20/mo. thereafter</span
-          >
+        <div class="price-container">
+          <span class="discount-price alt-font">$149.99</span>
+          <span class="real-price">$169.99</span>
+        </div>
+        <button class="add-button">
+          <img src="images/icon-cart.svg" alt="cart-icon" />
+          <span class="button-text">Add to Cart</span>
         </button>
-        <form action="" method="GET" novalidate>
-          <div class="field-group">
-            <input
-              id="first-name"
-              type="text"
-              required
-              minlength="4"
-              maxlength="12"
-              placeholder="First Name"
-            />
-            <img id="first-name-icon" src="images/icon-error.svg" alt="error" />
-          </div>
-          <span id="first-name-text" class="error-text"
-            >Frist name cannot be empty!</span
-          >
-          <div class="field-group">
-            <input
-              id="last-name"
-              type="text"
-              required
-              minlength="4"
-              maxlength="12"
-              placeholder="Last Name"
-            />
-            <img id="last-name-icon" src="images/icon-error.svg" alt="error" />
-          </div>
-          <span id="last-name-text" class="error-text"
-            >Last name cannot be empty!</span
-          >
-          <div class="field-group">
-            <input
-              id="email"
-              required
-              type="email"
-              placeholder="Email Address"
-            />
-            <img id="email-icon" src="images/icon-error.svg" alt="error" />
-          </div>
-          <span id="email-text" class="error-text"
-            >Email name cannot be empty!</span
-          >
-          <div class="field-group">
-            <input
-              id="password"
-              required
-              type="password"
-              placeholder="Password"
-            />
-            <img id="password-icon" src="images/icon-error.svg" alt="error" />
-          </div>
-          <span id="password-text" class="error-text"
-            >Password name cannot be empty!</span
-          >
-          <input id="submit" type="submit" value="Claim your free trial" />
-          <span class="terms-services"
-            >By clicking the button, you are agreeing to our
-            <span class="red-text">Terms and Services</span></span
-          >
-        </form>
-      </section>
+      </div>
     </main>
-    <script src="vaild.js"></script>
   </body>
 </html>

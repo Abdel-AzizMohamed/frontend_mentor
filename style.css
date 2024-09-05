@@ -7,193 +7,132 @@
 }
 
 :root {
-
     /* ### Primary */
-    --Red: hsl(0, 100%, 74%); 
-    --Green: hsl(154, 59%, 51%);
-    
-    /* ### Accent */
-    --Blue: hsl(248, 32%, 49%);
+    --Dark-cyan: #3c8067;
+    --Cream: #f2ebe3;
     
     /* ### Neutral */
-    --Dark-Blue: hsl(249, 10%, 26%); 
-    --Grayish-Blue: hsl(246, 25%, 77%);
+    --Very-dark-blue: #1c232b;
+    --Dark-grayish-blue: #6c7289;
+    --White: #ffffff;
 
-    font-size: 16px;
+    font-size: 14px;
+    --base-radius: 10px;
+    --sp-num: 32px;
 }
 
-body { /* 400, 500, 600, 700 */
+body { /* 500, 700 */
+    background-color: var(--Cream);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--Red);
-    background-image: url(images/bg-intro-desktop.png);
-    background-size: cover;
-    min-height: 100vh;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
     font-style: normal;
 }
+
+.alt-font {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "SOFT" 0, "WONK" 0;
+}
 /* End Global */
+
 /* Start Main */
 main {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    max-width: 600px;
 }
 
-main .sign-landing {
-    max-width: 540px;
+main .image-container {
+    border-radius: var(--base-radius) 0 0 var(--base-radius);
+    flex-basis: 50%;
 }
 
-main .sign-landing .landing-heading {
-    line-height: 1;
-    font-weight: 700;
-    color: #fff;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-main .sign-landing .landing-text {
-    color: #fff;
-    line-height: 1.5;
-    font-size: 1rem;
-}
-
-main .sign-container {
-    max-width: 540px
-}
-
-main .sign-container .free-try {
-    margin-bottom: 1rem;
+main .image-container img {
+    border-radius: var(--base-radius) 0 0 var(--base-radius);
     width: 100%;
-    font-weight: 600;
-    font-size: .9rem;
-    background-color: var(--Blue);
-    border: none;
-    color: #fff;
-    border-radius: .7rem;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 20%);
-    padding: 1.3rem;
-    cursor: pointer;
 }
 
-main .sign-container .free-try .small-text {
-    font-weight: 400;
+main .product-container {
+    padding: var(--sp-num);
+    border-radius: 0 var(--base-radius) var(--base-radius) 0;
+    flex-basis: 50%;
+    background-color: var(--White);
 }
 
-main .sign-container form {
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: .7rem;
-    box-shadow: 0 5px 0px rgba(0, 0, 0, 20%);
-}
-
-main .sign-container form .field-group {
-    position: relative;
-}
-
-main .sign-container form input:not([type="submit"]) {
-    width: 100%;
-    font-weight: 600;
-    border: 1px solid var(--Grayish-Blue);
-    border-radius: .3rem;
-    background-color: transparent;
-    padding: 1rem 0 1rem 1.5rem;
-    margin-bottom: 1rem;
-}
-
-main .sign-container form input:not([type="submit"]).error {
-    border-width: 2px;
-    border-color: hsl(7, 73%, 66%);
-    color: hsl(7, 73%, 66%);
-    margin-bottom: 0rem;
-}
-
-main .sign-container form .error-text {
-    display: block;
-    margin-bottom: 1rem;
-    text-align: right;
-    font-size: .8rem;
-    color: var(--Red);
-    padding: .5rem 0;
-    font-style: italic;
-    display: none;
-}
-
-main .sign-container form img {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
-    display: none;
-}
-
-main .sign-container form input:not([type="submit"]):focus {
-    outline: 1px solid var(--Dark-Blue);
-}
-
-main .sign-container form input[type="submit"] {
-    width: 100%;
-    background-color: var(--Green);
-    border: none;
-    border-radius: .5rem;
-    font-weight: 600;
-    font-size: 1rem;
+main .product-container .product-type {
     text-transform: uppercase;
-    padding: 1rem;
-    box-shadow: 0 5px 0px hsl(161, 62%, 41%);
+    letter-spacing: .5rem;
+    color: var(--Dark-grayish-blue)
+}
+
+main .product-container .product-heading {
+    text-transform: capitalize;
+    color: var(--Very-dark-blue);
+    font-size: var(--sp-num);
     margin: 1rem 0;
-    color: #fff;
-    cursor: pointer;
+    line-height: var(--sp-num);
+}
+
+main .product-container .product-info {
+    color: var(--Dark-grayish-blue);
+    line-height: 2rem;
+}
+
+main .product-container .price-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+main .product-container .price-container .discount-price {
+    color: var(--Dark-cyan);
+    font-size: var(--sp-num);
+    margin-right: 1rem;
+}
+
+main .product-container .price-container .real-price {
+    color: var(--Dark-grayish-blue);
+    text-decoration: dashed;
+}
+
+main .product-container .add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: var(--base-radius);
+    background-color: var(--Dark-cyan);
+    width: 100%;
+    padding: 1rem 0;
     transition: background .3s ease;
+    cursor: pointer;
 }
 
-main .sign-container form input[type="submit"]:hover {
-    background-color: hsl(150, 52%, 62%);
+main .product-container .add-button:hover {
+    background-color: #1B3F31;
 }
 
-main .sign-container form .terms-services {
-    display: block;
-    text-align: center;
-    color: var(--Grayish-Blue);
-    font-size: .8rem;
-}
-
-main .sign-container form .terms-services .red-text {
-    color: var(--Red);
-    font-weight: 600;
+main .product-container .add-button .button-text {
+    color: var(--White);
+    font-weight: 700;
+    margin-left: .5rem;
 }
 /* End Main */
 
 /* Start Media */
 @media (max-width: 767px) {
-    :root {
-        font-size: 12px
-    }
-
     main {
         flex-direction: column;
-    }
-
-    main .sign-landing {
-        width: 327px
-    }
-
-    main .sign-landing .landing-heading {
-        text-align: center;
-    }
-
-    main .sign-landing .landing-text {
-        text-align: center;
-        margin: 2rem 0;
-    }
-
-
-    main .sign-container {
-        width: 327px
+        padding: 1rem;
     }
 }
 /* End Media */
