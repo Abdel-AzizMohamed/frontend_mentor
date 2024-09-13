@@ -22,7 +22,7 @@
 body { /* 400, 600, 700 */
     min-height: 100vh;
     background-color: var(--light-pink);
-    font-family: "Work Sans-[", sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
