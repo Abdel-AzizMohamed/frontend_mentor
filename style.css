@@ -7,132 +7,114 @@
 }
 
 :root {
-    /* ### Primary */
-    --Dark-cyan: #3c8067;
-    --Cream: #f2ebe3;
+
+    /* Brand */
+    --brand-200: hsl(292, 16%, 49%);
+    --brand-300: hsl(292, 42%, 14%);
     
-    /* ### Neutral */
-    --Very-dark-blue: #1c232b;
-    --Dark-grayish-blue: #6c7289;
-    --White: #ffffff;
+    /* Natural */
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
 
-    font-size: 14px;
-    --base-radius: 10px;
-    --sp-num: 32px;
+    font-size: 16px;
 }
 
-body { /* 500, 700 */
-    background-color: var(--Cream);
+body { /* 400, 600, 700 */
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Montserrat", sans-serif;
+    background-color: var(--light-pink);
+    font-family: "Work Sans-[", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
-}
-
-.alt-font {
-    font-family: "Fraunces", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    font-variation-settings: "SOFT" 0, "WONK" 0;
 }
 /* End Global */
 
 /* Start Main */
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 600px;
+    position: relative;
 }
 
-main .image-container {
-    border-radius: var(--base-radius) 0 0 var(--base-radius);
-    flex-basis: 50%;
-}
-
-main .image-container img {
-    border-radius: var(--base-radius) 0 0 var(--base-radius);
+main .image-container img{
     width: 100%;
 }
 
-main .product-container {
-    padding: var(--sp-num);
-    border-radius: 0 var(--base-radius) var(--base-radius) 0;
-    flex-basis: 50%;
-    background-color: var(--White);
+main .faq-container {
+    position: absolute;
+    left: 50%;
+    top: 168px;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    background-color: var(--white);
+    max-width: 600px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 16px 8px rgba(0, 0, 0, 10%);
 }
 
-main .product-container .product-type {
-    text-transform: uppercase;
-    letter-spacing: .5rem;
-    color: var(--Dark-grayish-blue)
-}
-
-main .product-container .product-heading {
-    text-transform: capitalize;
-    color: var(--Very-dark-blue);
-    font-size: var(--sp-num);
-    margin: 1rem 0;
-    line-height: var(--sp-num);
-}
-
-main .product-container .product-info {
-    color: var(--Dark-grayish-blue);
-    line-height: 2rem;
-}
-
-main .product-container .price-container {
+main .faq-container .heading-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 1rem 0;
+    margin-bottom: 2.5rem;
 }
 
-main .product-container .price-container .discount-price {
-    color: var(--Dark-cyan);
-    font-size: var(--sp-num);
-    margin-right: 1rem;
+main .faq-container .heading-container > img {
+    margin-right: 1.5rem;
 }
 
-main .product-container .price-container .real-price {
-    color: var(--Dark-grayish-blue);
-    text-decoration: dashed;
+main .faq-container .heading-container .faq-heading {
+    color: var(--brand-300);
+    font-weight: 700;
+    font-size: 3.5rem;
 }
 
-main .product-container .add-button {
+main .faq-container .faq-question:not(:last-of-type) {
+    margin-bottom: 3.5rem;
+}
+
+main .faq-container .faq-questions .question {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    border: none;
-    border-radius: var(--base-radius);
-    background-color: var(--Dark-cyan);
-    width: 100%;
-    padding: 1rem 0;
-    transition: background .3s ease;
     cursor: pointer;
 }
 
-main .product-container .add-button:hover {
-    background-color: #1B3F31;
+main .faq-container .faq-questions .question .question-text {
+    color: var(--brand-300);
+    font-size: 18px;
+    font-weight: 600;
+    transition: color .3s ease;
 }
 
-main .product-container .add-button .button-text {
-    color: var(--White);
-    font-weight: 700;
-    margin-left: .5rem;
+main .faq-container .faq-questions .question:hover  .question-text{
+    color: #B65FDA;
+}
+
+main .faq-container .faq-questions .answer {
+    color: var(--brand-200);
+    line-height: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+main .faq-container .faq-questions .wrap {
+    display: none;
 }
 /* End Main */
 
 /* Start Media */
 @media (max-width: 767px) {
-    main {
-        flex-direction: column;
-        padding: 1rem;
+    main .faq-container {
+        min-width: 327px;
     }
+
+    main .faq-container .faq-question:not(:last-of-type) {
+        border-bottom: 1px solid var(--light-pink);
+        padding-bottom: 1.75rem;
+        margin-bottom: 1.75rem;
+    }
+
+    main .faq-container .faq-questions .question .question-text {
+        font-size: 1rem;
+    }
+
 }
 /* End Media */
