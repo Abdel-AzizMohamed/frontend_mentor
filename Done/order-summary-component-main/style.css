@@ -1,0 +1,190 @@
+/* Start Global */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: 0;
+}
+
+:root {
+    /* ### Primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    
+    /* ### Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    
+    font-size: 16px;
+    --base-radius: 18px;
+}
+
+body { /* 500 700 900 */
+    background-color: var(--Pale-blue);
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+/* End Global */
+
+/* Start Card */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 437px;
+    background-image: url("images/pattern-background-desktop.svg");
+    background-size: cover
+}
+
+main .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 450px;
+    background-color: var(--Very-pale-blue);
+    border-radius: var(--base-radius);
+}
+
+main .card > img {
+    width: 100%;
+    border-radius: var(--base-radius) var(--base-radius) 0 0;
+}
+
+main .card .order-summary {
+    padding: 3rem;
+}
+
+main .card .order-summary .order-heading {
+    color: var(--Dark-blue);
+    text-transform: capitalize;
+    font-size: 1.75rem;
+    font-weight: 900;
+}
+
+main .card .order-summary .order-description {
+    margin: 1rem 0 2.6rem;
+    line-height: 1.75rem;
+    color: var(--Desaturated-blue);
+}
+
+main .card .order-summary .order-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .card .order-summary .order-info .plan-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .card .order-summary .order-info .plan-info-container .plan-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+main .card .order-summary .order-info .plan-info-container .plan-info .plan-type {
+    color: var(--Dark-blue);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+main .card .order-summary .order-info .plan-info-container .plan-info .plan-price {
+    color: var(--Desaturated-blue);
+    font-weight: bold;
+}
+
+main .card .order-summary .order-info .change-plan {
+    font-size: calc(1rem - 2px);
+    color: var(--Bright-blue);
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+main .card .order-summary .order-info .change-plan:hover {
+    color: hsl(245, 65%, 65%);
+    text-decoration: none;
+}
+
+main .card .order-summary .payment {
+    padding: 1rem 0;
+    margin: 3rem 0 2rem;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 12px 2px rgba(0, 0, 0, 15%);
+    background-color: var(--Bright-blue);
+    color: var(--Pale-blue);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+main .card .order-summary .payment:hover {
+    background-color: hsl(245, 65%, 65%);
+}
+
+main .card .order-summary .cancel-payment {
+    color: var(--Desaturated-blue);
+    text-transform: capitalize;
+    font-size: calc(1rem - 2px);
+    font-weight: 700;
+    letter-spacing: -0.025%;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+main .card .order-summary .cancel-payment:hover {
+    color: hsl(224, 35%, 30%);
+}
+/* End Card */
+
+/* End Card */
+@media (max-width: 767px) {
+    main .card {
+        max-width: 327px;
+    }
+
+    main .card .order-summary {
+        padding: 1.5rem;
+    }
+
+    main .card .order-summary .order-heading {
+        font-size: 1.4rem;
+    }
+    
+    main .card .order-summary .order-description {
+        letter-spacing: .025rem;
+    }
+
+    main .card .order-summary .order-info .plan-info-container .plan-info .plan-type {
+        font-weight: 500;
+    }
+    
+    main .card .order-summary .order-info .plan-info-container .plan-info .plan-price {
+        font-weight: 500;
+    }
+}
+/* End Card */

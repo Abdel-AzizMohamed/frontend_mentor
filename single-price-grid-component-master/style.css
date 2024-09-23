@@ -1,0 +1,72 @@
+/* Start Global */
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ### Primary */
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+
+    /* ### Neutral */
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+
+    --base-radius: 10px;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+/* End Global */
+
+/* Start Main */
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card .card-header {
+    width: 100%;
+    min-height: 216px;
+    background-color: #fff;
+    border-radius: var(--base-radius) var(--base-radius) 0 0;
+}
+
+.card .card-header h2 {
+    color: var(--Cyan);
+    font-size: 1.5rem;
+    letter-spacing: 0.01rem;
+}
+
+.card .card-header .highlight-text {
+    color: var(--Bright-Yellow);
+    font-size: 1rem;
+    letter-spacing: 0.01rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.card .card-header p {
+    font-size: 1rem;
+    color: var(--Grayish-Blue);
+    letter-spacing: -0.01rem;
+    line-height: 0.1rem;
+}
+
+.card section {
+    width: 50%;
+}
+/* End Main */
