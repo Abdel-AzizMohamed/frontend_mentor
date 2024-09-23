@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --main-color: hsl(47, 88%, 63%);
+    --main-light: hsl(0, 0%, 100%);
+    --alt-light: hsl(0, 0%, 50%);
+    --main-dark: hsl(0, 0%, 7%)
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--main-color);
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: var(--main-light);
+    padding: 15px;
+    border-radius: 12px;
+    max-width: 400px;
+    border: 1px solid var(--main-dark);
+    box-shadow: 3px 3px 3px var(--main-dark);
+}
+
+main .article-image {
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+main .card-status {
+    display: inline-block;
+    padding: 5px 10px;
+    color: var(--main-dark);
+    background-color: var(--main-color);
+    border-radius: 6px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+main .card-date {
+    color: var(--main-dark);
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+main h1 {
+    color: var(--main-dark);
+    margin: 10px 0;
+    font-weight: 600;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+main h1:hover {
+    color: var(--main-color)
+}
+
+main h1 .upper {
+    text-transform: uppercase;
+}
+
+main p {
+    line-height: 1.6;
+    color: var(--alt-light);
+    font-size: 1.15em;
+    margin: 15px 0;
+}
+
+main .user-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .user-profile img {
+    border-radius: 50%;
+    width: 36px;
+    margin-right: 10px;
+}
+
+main .user-profile .user-name{
+    text-transform: capitalize;
+    color: var(--main-dark);
+}

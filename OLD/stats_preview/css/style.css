@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: hsl(233, 47%, 7%);
+    --main-de-color: hsl(244, 38%, 16%);
+    --alt-color: hsl(277, 64%, 61%);
+    --main-light: hsl(0, 0%, 100%);
+    --main-trans-light: hsla(0, 0%, 100%, 0.75);
+    --alt-trans-light: hsla(0, 0%, 100%, 0.6)
+}
+
+body {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    min-height: 100vh;
+    font-size: 15px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-card {
+    background-color: var(--main-de-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    border-radius: 6px;
+}
+
+.stats-card .stats-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 50px;
+    flex-basis: 50%;
+}
+
+.stats-card .stats-text h1 {
+    color: var(--main-light);
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.stats-card .stats-text h1 .mark {
+    color: var(--alt-color)
+}
+
+.stats-card .stats-text p {
+    color: var(--alt-trans-light);
+    line-height: 1.6;
+    margin: 20px 0 60px;
+}
+
+.stats-card .stats-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%
+}
+
+.stats-card .stats-text ul span {
+    display: block;
+}
+
+.stats-card .stats-text ul span:first-child {
+    color: var(--main-light);
+    text-transform: uppercase;
+    font-size: 1.35em;
+    font-weight: 600;
+}
+
+.stats-card .stats-text ul span:last-child {
+    color: var(--alt-trans-light);
+    text-transform: uppercase;
+}
+
+.stats-card .image-container {
+    position: relative;
+    flex-grow: 1;
+}
+
+.stats-card .image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--alt-color);
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+
+.stats-card .image-container img {
+    width: 100%
+}
+
+@media (max-width: 767px) {
+    .stats-card {
+        flex-direction: column-reverse;
+    }
+
+    .stats-card .stats-text h1 {
+        text-align: center;
+    }
+
+    .stats-card .stats-text p {
+        text-align: center;
+    }
+
+    .stats-card .stats-text ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stats-card .stats-text ul li {
+        margin: 25px 0;
+    }
+}

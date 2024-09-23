@@ -1,0 +1,152 @@
+/* Start Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+:root {
+    font-size: 15px;
+
+    /* ### Primary */
+    --Orange: hsl(25, 97%, 53%);
+    
+    /* ### Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Dark-Blue: #252d37;
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    
+}
+
+body { /* 400, 700 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Very-Dark-Blue);
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+/* End Global */
+
+/* Start feedback-form */
+main .feedback-form {
+    width: 413px;
+    min-height: 416px;
+    padding: 2rem;
+    background-color: var(--Dark-Blue);
+    border-radius: 2rem;
+}
+
+main .feedback-form .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 51px;
+    height: 51px;
+    background-color: #303a45;
+}
+
+main .feedback-form .icon img {
+    width: 18px;
+}
+
+main .feedback-form h1 {
+    color: var(--White);
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+main .feedback-form p {
+    color: var(--Light-Grey);
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+main .feedback-form .score-selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+main .feedback-form .score-selector li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    background-color: #303a45;
+    color: var(--White);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+main .feedback-form .score-selector li:nth-last-child(1) {
+    background-color: var(--Orange);
+    color: var(--Dark-Blue)
+}
+
+main .feedback-form .score-selector li:nth-last-child(2) {
+    background-color: var(--White);
+    color: var(--Dark-Blue)
+}
+
+main .feedback-form button {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--White);
+    color: var(--Dark-Blue);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    border-radius: 2rem;
+}
+/* End feedback-form */
+
+/* Start completion-form */
+main .completion-form {
+    display: none;
+    text-align: center;
+    width: 413px;
+    min-height: 416px;
+    padding: 2rem;
+    background-color: var(--Dark-Blue);
+    border-radius: 2rem;
+}
+
+main .completion-form img {
+    width: 50%
+}
+
+main .completion-form .score-display {
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    background-color: #303a45;
+    border-radius: 1rem;
+    color: var(--Orange);
+    margin: 2rem 0;
+}
+
+main .completion-form h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+main .completion-form p {
+    color: var(--Light-Grey);
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+/* End completion-form */

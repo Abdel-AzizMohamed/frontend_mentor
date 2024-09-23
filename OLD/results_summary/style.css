@@ -1,0 +1,207 @@
+/* Start Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 18px;
+    background-color: var(--White);
+    font-family: "Hanken Grotesk", sans-serif; /* 500, 700, 800 */
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.container {
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* End Global */
+
+/* Start card global */
+main {
+    display: flex;
+    border-radius: 2rem;
+    width: 735px;
+    height: 512px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 20%);
+}
+/* End card global */
+
+/* Start result summary */
+main .result-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    border-radius: 2rem;
+    background-image: linear-gradient(180deg, hsl(252, 94%, 63%) 0%, rgba(46, 43, 233, 1) 100%);
+}
+
+main .result-summary .summary-title {
+    color: var(--Light-lavender);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+main .result-summary .summary-precent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(0deg, hsl(246, 86%, 57%) 0%, hsl(255, 71%, 46%) 100%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 2rem 0;
+}
+
+main .result-summary .summary-precent h1 {
+    color: var(--White);
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+main .result-summary .summary-precent span {
+    color: var(--Light-lavender);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+main .result-summary .summary-info {
+    color: var(--White);
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+main .result-summary .summary-text {
+    color: var(--Light-lavender);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 70%;
+    text-align: center;
+}
+/* End result summary */
+
+/* Start result info */
+main .result-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-basis: 50%;
+    padding: 0 2rem;
+}
+
+main .result-info .info-title {
+    color: var(--Dark-gray-blue);
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.65rem;
+    margin: 2rem 0;
+}
+
+main .result-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%
+}
+
+main .result-info ul li {
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    border-radius: 12px;
+}
+
+main .result-info ul li:nth-child(1) {
+    background-color: color-mix(in srgb, var(--Light-red) 10%, transparent);
+}
+
+main .result-info ul li:nth-child(1) .left-side {
+    color: var(--Light-red)
+}
+
+main .result-info ul li:nth-child(2) {
+    background-color: color-mix(in srgb, var(--Orangey-yellow) 10%, transparent);
+}
+
+main .result-info ul li:nth-child(2) .left-side {
+    color: var(--Orangey-yellow)
+}
+
+main .result-info ul li:nth-child(3) {
+    background-color: color-mix(in srgb, var(--Green-teal) 10%, transparent);
+}
+
+main .result-info ul li:nth-child(3) .left-side {
+    color: var(--Green-teal)
+}
+
+main .result-info ul li:nth-child(4) {
+    background-color: color-mix(in srgb, var(--Cobalt-blue) 10%, transparent);
+}
+
+main .result-info ul li:nth-child(4) .left-side {
+    color: var(--Cobalt-blue)
+}
+
+main .result-info ul li .left-side span {
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+main .result-info ul li .right-side .precent {
+    color: var(--Dark-gray-blue);
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+main .result-info ul li .right-side .max-precent {
+    color: color-mix(in srgb, var(--Dark-gray-blue) 30%, transparent);
+    font-weight: 500;
+}
+
+main .result-info button {
+    width: 100%;
+    color: var(--White);
+    background-color: var(--Dark-gray-blue);
+    border-radius: 2rem;
+    text-transform: capitalize;
+    border: none;
+    padding: 1.2rem 0;
+    font-size: .9rem;
+    font-weight: 800;
+    margin-top: 1rem;
+}
+/* End result info */
